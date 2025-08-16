@@ -5,7 +5,7 @@ const canvas = document.getElementById('canvas');
 
 // 1. Создание сцены
 const scene = new THREE.Scene();
-scene.background = new THREE.Color('#F0F0F0');
+scene.background = new THREE.Color('#000');
 
 // 2. Добавить камеру
 const camera = new THREE.PerspectiveCamera(
@@ -15,11 +15,11 @@ camera.position.z = 5;
 
 // 3. Добавить объект на сцену
 const geometry = new THREE.DodecahedronGeometry();
-const material = new THREE.MeshLambertMaterial({color: '#468585', emissive: '#468585'});
+const material = new THREE.MeshLambertMaterial({color: '#fff', emissive: '#603'});
 const dodecahedron = new THREE.Mesh(geometry, material);
 
 const boxGeometry = new THREE.BoxGeometry(2, 0.1, 3);
-const boxMaterial = new THREE.MeshLambertMaterial({color: '#B4B4B3', emissive: '#B4B4B3'});
+const boxMaterial = new THREE.MeshLambertMaterial({color: '#fff', emissive: '#603'});
 const box = new THREE.Mesh(boxGeometry, boxMaterial);
 box.position.y = -1.5;
 
